@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>PengUIn – Junior Developer</title>
+        <meta name="description" content="Personal website and portfolio of Peng, aspiring full-stack developer with a design mindset.">
+
+        <!-- Favicon -->
+        <link rel="icon" href="/favicon.ico" sizes="any">
+        <link rel="icon" type="image/svg+xml" href="/icon.svg">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="manifest" href="/site.webmanifest">
+
+        <!-- Color scheme hints -->
+        <meta name="color-scheme" content="light dark">
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f2">
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#191919">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <script>
+            (function () {
+            const key = "theme";
+            const saved = localStorage.getItem(key);
+
+            if (saved) {
+                // If user picked a theme manually, honor it
+                document.documentElement.setAttribute("data-theme", saved);
+            } else {
+                // Otherwise, follow system preference
+                const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+            }
+            })();
+        </script>
+    </head>
+    <body>
+        <div class="nav-overlays overlays">
+            <nav id="navibar">
+                <div class="navi-begin">
+                    <a id="logo" href="#home"></a>
+                    <div id="name">
+                        <a id="peng">
+                            Peng
+                        </a>
+                        <br/>
+                        <a id="xh">
+                            Xinhui
+                        </a>
+                    </div>
+                    
+                </div>
+                <ul class="navi-end">
+                    <li class="nav-item">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="btn">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cv.html" class="btn">CV <u>⬇︎</u></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="themeBtn" class="btn">☼</a>
+                    </li>
+                </ul> 
+            </nav>
+        </div>
+        <main class="snap">
+            <section id="home" class="page flex-container">
+                <div id="intro" class="left-half">
+                    <div id="greetings">
+                        <h2>Hej,</h2>
+                        <h2>I am <span class="highlight"> Peng Xinhui </span> :-) </h2>
+                    </div>
+                    <div id="title">
+                        <h2>Junior Developer</h2>
+                    </div>
+                    <div id="links">
+                        
+                    </div>
+                    <div id="profile">
+                        Self-motivated developer with a passion for building user-oriented IT solutions, 
+                        both digital and physical. 
+                        I enjoy solving problems while continuously expanding my programming skills, 
+                        and I have a strong interest in UI/UX design and creative, product-focused development.
+                    </div>
+
+                </div>
+                <div class = "right-half">
+                    <div id="featurePic" class="img-container">
+                        <img src="images/img-non.png">
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="page">
+                
+            </section>
+        </main>
+        
+
+        <script src="scripts/main.js"></script>
+
+    </body>
+
+</html>
