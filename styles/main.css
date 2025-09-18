@@ -1,7 +1,7 @@
 :root {
     --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --overlay-bg: rgba(125, 125, 125, 0.5);
+    --overlay-bg: rgba(112, 111, 111, 0.3);
     --muted-color: #545d75;
     --my-pink: #DB4B74;
     --my-blush: #F1C5C5;
@@ -64,8 +64,11 @@ button, .btn {
     right: 0;
     width: 100%;
     margin: 0;
+    backdrop-filter: blur(8px);
     z-index: 1000;
 }
+
+
 
 nav {
     max-width: 1080px;
@@ -138,13 +141,25 @@ a:hover {
 
 .page {
     margin: 60px auto;
-    padding: 1rem;
-    display: flex;
+    padding: 80px 1rem 1rem 1rem;
     height: 100vh;
     max-width: 1000px;
     font-family: var(--mono);
+    line-height: 24px;
     text-align: justify;
     scroll-snap-align: start;
+}
+
+.flex-container {
+    display: flex;
+    padding-top: 1rem;
+}
+
+.page-title {
+    margin-right: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--feature-color);
 }
 
 #greetings {
@@ -153,7 +168,7 @@ a:hover {
 
 #title {
     background-color: var(--feature-color);
-    background-image: linear-gradient(to right, #4C47D1,#DB4B74,#EB835B, #DDE63F);
+    background-image: linear-gradient(to right, #4C47D1,#DB4B74, tomato, lightcoral);
     width: fit-content;
     color: transparent;
     background-clip: text;
@@ -161,29 +176,93 @@ a:hover {
 
 .flex-container > div {
     flex: 1;
-    padding: 1rem;
-    margin: auto 2rem;
+    margin: auto 1rem;
+}
+
+.half > div {
+    min-width: 30vh;
 }
 
 #featurePic {
-    max-height: 500px;
-    max-width: 400px;
+    max-height: 400px;
+    max-width: 350px;
+    padding: 2rem;
 }
 
 #img-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
-#featurePic {
-    padding: 2rem;
-}
-
-img {
+.image {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     display: block;
+    border-radius: 10px;
 }
 
+#links {
+    padding: 2px 0;
+}
+
+.icon {
+    height: 1em;
+    width: 1em;
+    vertical-align: -0.125em;
+    fill: var(--counter-feature-color);
+}
+
+.linked-icon {
+    text-decoration: none;
+    font-size: 24px;
+    margin: 1px 1px;
+}
+
+.textbox {
+    background-color: rgb(240, 248, 255, 0.9);
+    border: var(--my-pink) solid 1px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-top:8px;
+    min-width: 180px;
+    box-shadow: 0px 0px 8px var(--my-pink);
+    font-weight: 600;
+}
+
+.left > div {
+    margin-bottom: 2em;
+}
+
+p {
+    margin: 6px;
+}
+
+.headline {
+    color: var(--feature-color);
+}
+
+.skills {
+    display: flex;
+    min-height: 15vh;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.skill-logo {
+    height: 60px;
+    width: 60px;
+}
+
+.skill-name {
+    font-size: 12px;
+    text-align: center;
+    line-height: 15px;
+}
